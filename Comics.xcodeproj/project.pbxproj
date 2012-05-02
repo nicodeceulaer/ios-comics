@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49931B041551F3F100BAC71E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49931B031551F3F100BAC71E /* UIKit.framework */; };
+		49931B061551F3F100BAC71E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49931B051551F3F100BAC71E /* Foundation.framework */; };
+		49931B081551F3F100BAC71E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49931B071551F3F100BAC71E /* CoreGraphics.framework */; };
+		49931B0E1551F3F100BAC71E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49931B0C1551F3F100BAC71E /* InfoPlist.strings */; };
+		49931B101551F3F100BAC71E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B0F1551F3F100BAC71E /* main.m */; };
+		49931B141551F3F100BAC71E /* ComicsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B131551F3F100BAC71E /* ComicsAppDelegate.m */; };
+		49931B171551F3F100BAC71E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49931B151551F3F100BAC71E /* MainStoryboard_iPhone.storyboard */; };
+		49931B1A1551F3F100BAC71E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49931B181551F3F100BAC71E /* MainStoryboard_iPad.storyboard */; };
+		49931B1D1551F3F100BAC71E /* ComicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B1C1551F3F100BAC71E /* ComicsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49931AFF1551F3F100BAC71E /* Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49931B031551F3F100BAC71E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49931B051551F3F100BAC71E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49931B071551F3F100BAC71E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49931B0B1551F3F100BAC71E /* Comics-Info.plist */ = {isa = PBXFileReference; path = "Comics-Info.plist"; sourceTree = "<group>"; };
+		49931B0D1551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49931B0F1551F3F100BAC71E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49931B111551F3F100BAC71E /* Comics-Prefix.pch */ = {isa = PBXFileReference; path = "Comics-Prefix.pch"; sourceTree = "<group>"; };
+		49931B121551F3F100BAC71E /* ComicsAppDelegate.h */ = {isa = PBXFileReference; path = ComicsAppDelegate.h; sourceTree = "<group>"; };
+		49931B131551F3F100BAC71E /* ComicsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsAppDelegate.m; sourceTree = "<group>"; };
+		49931B161551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		49931B191551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		49931B1B1551F3F100BAC71E /* ComicsViewController.h */ = {isa = PBXFileReference; path = ComicsViewController.h; sourceTree = "<group>"; };
+		49931B1C1551F3F100BAC71E /* ComicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49931AFC1551F3F100BAC71E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49931B041551F3F100BAC71E /* UIKit.framework in Frameworks */,
+				49931B061551F3F100BAC71E /* Foundation.framework in Frameworks */,
+				49931B081551F3F100BAC71E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49931AF41551F3F100BAC71E = {
+			isa = PBXGroup;
+			children = (
+				49931B091551F3F100BAC71E /* Comics */,
+				49931B021551F3F100BAC71E /* Frameworks */,
+				49931B001551F3F100BAC71E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49931B001551F3F100BAC71E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49931AFF1551F3F100BAC71E /* Comics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49931B021551F3F100BAC71E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49931B031551F3F100BAC71E /* UIKit.framework */,
+				49931B051551F3F100BAC71E /* Foundation.framework */,
+				49931B071551F3F100BAC71E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49931B091551F3F100BAC71E /* Comics */ = {
+			isa = PBXGroup;
+			children = (
+				49931B121551F3F100BAC71E /* ComicsAppDelegate.h */,
+				49931B131551F3F100BAC71E /* ComicsAppDelegate.m */,
+				49931B151551F3F100BAC71E /* MainStoryboard_iPhone.storyboard */,
+				49931B181551F3F100BAC71E /* MainStoryboard_iPad.storyboard */,
+				49931B1B1551F3F100BAC71E /* ComicsViewController.h */,
+				49931B1C1551F3F100BAC71E /* ComicsViewController.m */,
+				49931B0A1551F3F100BAC71E /* Supporting Files */,
+			);
+			path = Comics;
+			sourceTree = "<group>";
+		};
+		49931B0A1551F3F100BAC71E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49931B0B1551F3F100BAC71E /* Comics-Info.plist */,
+				49931B0C1551F3F100BAC71E /* InfoPlist.strings */,
+				49931B0F1551F3F100BAC71E /* main.m */,
+				49931B111551F3F100BAC71E /* Comics-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49931AFE1551F3F100BAC71E /* Comics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49931B201551F3F100BAC71E /* Build configuration list for PBXNativeTarget "Comics" */;
+			buildPhases = (
+				49931AFB1551F3F100BAC71E /* Sources */,
+				49931AFC1551F3F100BAC71E /* Frameworks */,
+				49931AFD1551F3F100BAC71E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Comics;
+			productName = Comics;
+			productReference = 49931AFF1551F3F100BAC71E /* Comics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49931AF61551F3F100BAC71E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Comics;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Intuit;
+			};
+			buildConfigurationList = 49931AF91551F3F100BAC71E /* Build configuration list for PBXProject "Comics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49931AF41551F3F100BAC71E;
+			productRefGroup = 49931B001551F3F100BAC71E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49931AFE1551F3F100BAC71E /* Comics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49931AFD1551F3F100BAC71E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49931B0E1551F3F100BAC71E /* InfoPlist.strings in Resources */,
+				49931B171551F3F100BAC71E /* MainStoryboard_iPhone.storyboard in Resources */,
+				49931B1A1551F3F100BAC71E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49931AFB1551F3F100BAC71E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49931B101551F3F100BAC71E /* main.m in Sources */,
+				49931B141551F3F100BAC71E /* ComicsAppDelegate.m in Sources */,
+				49931B1D1551F3F100BAC71E /* ComicsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49931B0C1551F3F100BAC71E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49931B0D1551F3F100BAC71E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49931B151551F3F100BAC71E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49931B161551F3F100BAC71E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		49931B181551F3F100BAC71E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49931B191551F3F100BAC71E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49931B1E1551F3F100BAC71E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49931B1F1551F3F100BAC71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49931B211551F3F100BAC71E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Comics/Comics-Prefix.pch";
+				INFOPLIST_FILE = "Comics/Comics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49931B221551F3F100BAC71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Comics/Comics-Prefix.pch";
+				INFOPLIST_FILE = "Comics/Comics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49931AF91551F3F100BAC71E /* Build configuration list for PBXProject "Comics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49931B1E1551F3F100BAC71E /* Debug */,
+				49931B1F1551F3F100BAC71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49931B201551F3F100BAC71E /* Build configuration list for PBXNativeTarget "Comics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49931B211551F3F100BAC71E /* Debug */,
+				49931B221551F3F100BAC71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49931AF61551F3F100BAC71E /* Project object */;
+}
