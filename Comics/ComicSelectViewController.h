@@ -1,5 +1,5 @@
 //
-//  ComicsViewController.h
+//  ComicSelectViewController.h
 //  Comics
 //
 //  Created by Sergio Haro on 5/2/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComicsViewController : UITableViewController
+@interface ComicSelectViewController : UITableViewController
 
 @end

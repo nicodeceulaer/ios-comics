@@ -16,6 +16,8 @@
 		49931B171551F3F100BAC71E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49931B151551F3F100BAC71E /* MainStoryboard_iPhone.storyboard */; };
 		49931B1A1551F3F100BAC71E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49931B181551F3F100BAC71E /* MainStoryboard_iPad.storyboard */; };
 		49931B1D1551F3F100BAC71E /* ComicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B1C1551F3F100BAC71E /* ComicsViewController.m */; };
+		49931B251551F56900BAC71E /* ComicSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B241551F56900BAC71E /* ComicSelectViewController.m */; };
+		49931B2C1551F75800BAC71E /* ComicsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 49931B2B1551F75800BAC71E /* ComicsFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +25,20 @@
 		49931B031551F3F100BAC71E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49931B051551F3F100BAC71E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49931B071551F3F100BAC71E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49931B0B1551F3F100BAC71E /* Comics-Info.plist */ = {isa = PBXFileReference; path = "Comics-Info.plist"; sourceTree = "<group>"; };
+		49931B0B1551F3F100BAC71E /* Comics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Comics-Info.plist"; sourceTree = "<group>"; };
 		49931B0D1551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49931B0F1551F3F100BAC71E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49931B111551F3F100BAC71E /* Comics-Prefix.pch */ = {isa = PBXFileReference; path = "Comics-Prefix.pch"; sourceTree = "<group>"; };
-		49931B121551F3F100BAC71E /* ComicsAppDelegate.h */ = {isa = PBXFileReference; path = ComicsAppDelegate.h; sourceTree = "<group>"; };
+		49931B111551F3F100BAC71E /* Comics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Comics-Prefix.pch"; sourceTree = "<group>"; };
+		49931B121551F3F100BAC71E /* ComicsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComicsAppDelegate.h; sourceTree = "<group>"; };
 		49931B131551F3F100BAC71E /* ComicsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsAppDelegate.m; sourceTree = "<group>"; };
 		49931B161551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		49931B191551F3F100BAC71E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		49931B1B1551F3F100BAC71E /* ComicsViewController.h */ = {isa = PBXFileReference; path = ComicsViewController.h; sourceTree = "<group>"; };
+		49931B1B1551F3F100BAC71E /* ComicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComicsViewController.h; sourceTree = "<group>"; };
 		49931B1C1551F3F100BAC71E /* ComicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsViewController.m; sourceTree = "<group>"; };
+		49931B231551F56900BAC71E /* ComicSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicSelectViewController.h; sourceTree = "<group>"; };
+		49931B241551F56900BAC71E /* ComicSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicSelectViewController.m; sourceTree = "<group>"; };
+		49931B2A1551F75800BAC71E /* ComicsFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicsFetcher.h; sourceTree = "<group>"; };
+		49931B2B1551F75800BAC71E /* ComicsFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicsFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +85,15 @@
 		49931B091551F3F100BAC71E /* Comics */ = {
 			isa = PBXGroup;
 			children = (
-				49931B121551F3F100BAC71E /* ComicsAppDelegate.h */,
-				49931B131551F3F100BAC71E /* ComicsAppDelegate.m */,
 				49931B151551F3F100BAC71E /* MainStoryboard_iPhone.storyboard */,
 				49931B181551F3F100BAC71E /* MainStoryboard_iPad.storyboard */,
 				49931B1B1551F3F100BAC71E /* ComicsViewController.h */,
 				49931B1C1551F3F100BAC71E /* ComicsViewController.m */,
+				49931B231551F56900BAC71E /* ComicSelectViewController.h */,
+				49931B241551F56900BAC71E /* ComicSelectViewController.m */,
 				49931B0A1551F3F100BAC71E /* Supporting Files */,
+				49931B2A1551F75800BAC71E /* ComicsFetcher.h */,
+				49931B2B1551F75800BAC71E /* ComicsFetcher.m */,
 			);
 			path = Comics;
 			sourceTree = "<group>";
@@ -93,6 +101,8 @@
 		49931B0A1551F3F100BAC71E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49931B121551F3F100BAC71E /* ComicsAppDelegate.h */,
+				49931B131551F3F100BAC71E /* ComicsAppDelegate.m */,
 				49931B0B1551F3F100BAC71E /* Comics-Info.plist */,
 				49931B0C1551F3F100BAC71E /* InfoPlist.strings */,
 				49931B0F1551F3F100BAC71E /* main.m */,
@@ -169,6 +179,8 @@
 				49931B101551F3F100BAC71E /* main.m in Sources */,
 				49931B141551F3F100BAC71E /* ComicsAppDelegate.m in Sources */,
 				49931B1D1551F3F100BAC71E /* ComicsViewController.m in Sources */,
+				49931B251551F56900BAC71E /* ComicSelectViewController.m in Sources */,
+				49931B2C1551F75800BAC71E /* ComicsFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
