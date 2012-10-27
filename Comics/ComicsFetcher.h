@@ -11,5 +11,6 @@
 @interface ComicsFetcher : NSObject
 
 + (NSArray *)comics;
++ (NSDictionary *)entryForComic:(NSDictionary *)comic forEpisode:(NSUInteger)index;
 + (NSString *)stringFromType: (NSInteger)type;
 @end

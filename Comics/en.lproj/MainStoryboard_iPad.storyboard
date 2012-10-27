@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="sci-rv-E7v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="sci-rv-E7v">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--Comics View Controller-->
+        <!--Comics Table View Controller-->
         <scene sceneID="K7P-8J-PRp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="COL-mL-ZAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="ssQ-ln-ayE" customClass="ComicsViewController" sceneMemberID="viewController">
+                <tableViewController id="ssQ-ln-ayE" customClass="ComicsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cge-mE-e8Z">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Comic Cell" id="1fu-UJ-EOI">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Comic Cell" textLabel="28Z-Lg-rrq" style="IBUITableViewCellStyleDefault" id="1fu-UJ-EOI">
                                 <rect key="frame" x="0.0" y="22" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="748" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="28Z-Lg-rrq">
+                                            <rect key="frame" x="10" y="0.0" width="728" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="ESS-ep-b4O" kind="push" identifier="Show Comic Segue" id="AGe-b5-8wV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,28 +43,31 @@
                     <navigationItem key="navigationItem" id="xA5-v2-F4F">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="tuy-el-vrZ">
                             <connections>
-                                <segue destination="BAr-kE-EUx" kind="popover" popoverAnchorBarButtonItem="tuy-el-vrZ" id="Pz3-rv-C3L">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="chooseComicsPressed:" destination="ssQ-ln-ayE" id="zF5-wJ-s02"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BAr-kE-EUx" kind="popover" identifier="Choose Comics Segue" popoverAnchorBarButtonItem="tuy-el-vrZ" id="cI8-IJ-eQj">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COL-mL-ZAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="12"/>
+            <point key="canvasLocation" x="1244" y="12"/>
         </scene>
-        <!--Comic Select View Controller-->
+        <!--Comic Chooser View Controller-->
         <scene sceneID="Kkb-PA-XCQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xcS-af-gPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="BAr-kE-EUx" customClass="ComicSelectViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mYD-qD-sxe">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                <tableViewController id="BAr-kE-EUx" customClass="ComicChooserViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="32" sectionFooterHeight="22" id="mYD-qD-sxe">
+                        <rect key="frame" x="0.0" y="20" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Comic Cell" textLabel="c6c-VK-9m6" style="IBUITableViewCellStyleDefault" id="UYA-dk-6bB">
-                                <rect key="frame" x="0.0" y="22" width="540" height="44"/>
+                                <rect key="frame" x="0.0" y="32" width="540" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
@@ -78,15 +90,25 @@
                             <outlet property="delegate" destination="BAr-kE-EUx" id="6ih-2s-9k4"/>
                         </connections>
                     </tableView>
-                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="480"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcS-af-gPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="22"/>
+            <point key="canvasLocation" x="2154" y="-706"/>
+        </scene>
+        <!--Comics Page View Controller-->
+        <scene sceneID="aoK-XB-HV3">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ESS-ep-b4O" customClass="ComicsPageViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P9B-sm-lHo"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFV-m9-o5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1tx-ob-YQ3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Arg-Wd-T3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="sci-rv-E7v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="HY2-0R-vjd">
@@ -98,16 +120,23 @@
                         <segue destination="ssQ-ln-ayE" kind="relationship" relationship="rootViewController" id="Dlr-Eq-DOY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Arg-Wd-T3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="317" y="12"/>
         </scene>
     </scenes>
     <classes>
-        <class className="ComicSelectViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicSelectViewController.h"/>
+        <class className="ComicChooserViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicChooserViewController.h"/>
         </class>
-        <class className="ComicsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicsViewController.h"/>
+        <class className="ComicsPageViewController" superclassName="UIPageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicsPageViewController.h"/>
+        </class>
+        <class className="ComicsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="chooseComicsPressed:" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

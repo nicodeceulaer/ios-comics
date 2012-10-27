@@ -29,6 +29,13 @@
     return [[self executeFetch:request] valueForKey:@"comics"];
 }
 
++ (NSDictionary *)entryForComic:(NSDictionary *)comic forEpisode:(NSUInteger)index
+{
+    NSUInteger comicID = [[comic valueForKey:@"id"] unsignedIntValue];
+    NSString *request = [NSString stringWithFormat:@"/comics/%d/%d/", comicID, index];
+    return [[self executeFetch:request] valueForKey:@"entry"];
+}
+
 + (NSString *)stringFromType: (NSInteger)type
 {
     switch (type)
